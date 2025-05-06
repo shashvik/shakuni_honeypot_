@@ -164,7 +164,7 @@ const HeroSection = () => {
                   <li>Real-time alerting and analytics</li>
                   <li>Easy integration & deployment</li>
                 </ul>
-                <a href="https://github.com/shashank-sharma/shakuni-dark-guard" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 bg-shakuni-accent text-shakuni-dark rounded-md font-medium hover:bg-shakuni-accent/90 transition-colors w-full justify-center mb-4">
+                <a href="https://github.com/shashvik/shakuni_honeypot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 bg-shakuni-accent text-shakuni-dark rounded-md font-medium hover:bg-shakuni-accent/90 transition-colors w-full justify-center mb-4">
                   View on GitHub
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M14 3h7m0 0v7m0-7L10 14m-4 7h7a2 2 0 0 0 2-2v-7"/></svg>
                 </a>
