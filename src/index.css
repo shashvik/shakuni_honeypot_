@@ -1,0 +1,77 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 162 94% 51%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 162 94% 51%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-shakuni-dark text-shakuni-text;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Subtle honeycomb pattern background */
+.honeycomb-bg {
+  background-image: radial-gradient(#1DE9B6 1px, transparent 1px), radial-gradient(#1DE9B6 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-color: rgba(15, 17, 21, 0.97);
+  opacity: 0.05;
+}
+
+/* GSAP animation classes */
+.gsap-reveal {
+  opacity: 0;
+}
+
+.ring-pulse {
+  position: relative;
+}
+
+.ring-pulse::before {
+  content: '';
+  position: absolute;
+  border: 2px solid #1DE9B6;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
