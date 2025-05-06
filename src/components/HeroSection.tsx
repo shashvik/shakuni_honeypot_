@@ -83,7 +83,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div ref={heroRef} className="relative min-h-screen pt-16 overflow-hidden">
+      <div ref={heroRef} className="relative pt-16 overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 honeycomb-bg -z-10"></div>
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-shakuni-accent/5 blur-3xl -z-10"></div>
@@ -176,6 +176,23 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
+        <video 
+          src="/shakuni.mov" 
+          controls 
+          className="w-full rounded-lg shadow-xl cursor-pointer"
+          onClick={(e) => {
+            const video = e.target as HTMLVideoElement;
+            if (video.requestFullscreen) {
+              video.requestFullscreen();
+            }
+            video.play();
+          }}
+          preload="metadata" // Using the first frame as the banner
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
       <FeaturesSection />
     </>
